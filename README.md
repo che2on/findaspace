@@ -4,6 +4,8 @@ Find A Space
 
 Welcome to Findaspace project.
 
+View Working version here: http://findaspace.electionbooth.in
+
 Run instructions for coders
 
 1. Clone the project
