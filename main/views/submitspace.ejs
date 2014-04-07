@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="stylesheet" href="/stylesheets/bootstrap.css">
+    <link rel="stylesheet" href="/stylesheets/heroic-features.css">
+  </head>
+  <body>
+    <nav role="navigation" class="navbar navbar-fixed-top navbar-inverse">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" data-toggle="collapse" data-target=".navbar-ex1-collapse" class="navbar-toggle"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="#" class="navbar-brand">Co-workspace</a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling-->
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+          <ul class="nav navbar-nav pull-right">
+          <% if (user.local.email) { %>
+            <li><a href="#" class="pull-right">Welcome <%= user.local.email %></a></li>
+            <li><a href="/logout" class="pull-right">Logout</a></li>
+          <% } else { %>
+            <li><a href="/login" class="pull-right">Login</a></li>
+            <li><a href="/signup" class="pull-right">Register</a></li>
+          <% } %> 
+          </ul>
+        </div>
+        <!-- /.navbar-collapse-->
+      </div>
+      <!-- /.container-->
+    </nav>
+    <div class="container">
+      <div class=row">
+      <h1 style="text-align:center"> Submit your office space </h1>
+      </div>
+      <div class="row">
+       <form role="form" id="form1">
+            <div class="col-md-6">
+                <div class="form-group">
+                  <label> Title </label>
+                  <input id="exampleInputEmail1" type="text" placeholder="Title" name="field1" class="form-control">
+                </div>
+                <div class="form-group">
+                  <label> Description </label>
+                  <input id="exampleInputPassword1" type="text" placeholder="Description" name="field2"  class="form-control">
+                </div>
+               <div class="form-group">
+                    <label for="inputfile">Upload Pic</label>
+                    <input type="file" id="inputfile" name="field3">
+                    <p class="help-block">Maximum 10 Mb.</p>
+                </div>
+                <div class="form-group">
+                  <label> Open from (time) </label>
+                  <input id="exampleInputPassword3" type="text" placeholder="Open from (time)"  name="field4" class="form-control">
+                </div>
+                 <div class="form-group">
+                  <label> Price / day / person </label>
+                  <input id="exampleInputPassword4" type="text" placeholder="Price / day / person"  name="field5" class="form-control">
+                </div>
+                 <div class="form-group">
+                  <label> Number of desks available </label>
+                  <input id="exampleInputPassword5" type="text" placeholder="Number of desks available"  name="field6" class="form-control">
+                </div>
+                <div class="form-group">
+                  <label> Address </label>
+                  <input id="exampleInputPassword5" type="text" placeholder="Address"  name="field6" class="form-control">
+                </div>
+                <div class="form-group">
+                  <label> Select Dates </label>
+                  <input id="exampleInputPassword5" type="text" placeholder="Select dates"  name="field7" class="form-control">
+                </div>
+                
+                 <div class="form-group">
+                  <a type="submit" id="submit" class="btn btn-success">Submit</a>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <h3>Facilities</h3>
+                    <div class="checkbox">
+                      <label>
+                        <input type="checkbox" name="field8">Wifi/internet
+                      </label>
+                    </div>
+                    <div class="checkbox">
+                      <label>
+                        <input type="checkbox" name="field9">Desk
+                      </label>
+                    </div>
+                    <div class="checkbox">
+                      <label>
+                        <input type="checkbox" name="field10">Laptop/workstation
+                      </label>
+                    </div>
+                    <div class="checkbox">
+                      <label>
+                        <input type="checkbox" name="field11">Whiteboard
+                      </label>
+                    </div>
+                    <div class="checkbox">
+                      <label>
+                        <input type="checkbox" name="field12">Meeting room
+                      </label>
+                    </div>
+                    <div class="checkbox">
+                      <label>
+                        <input type="checkbox" name="field13">Drinking water
+                      </label>
+                    </div>
+                    <div class="checkbox">
+                      <label>
+                        <input type="checkbox" name="field14">AC
+                      </label>
+                    </div>
+                    <div class="checkbox">
+                      <label>
+                        <input type="checkbox" name="field15">Toilet
+                      </label>
+                    </div>
+                    <div class="checkbox">
+                      <label>
+                        <input type="checkbox">Accessible to disabled
+                      </label>
+                    </div>
+                    <div class="checkbox">
+                      <label>
+                        <input type="checkbox">Internship / Job
+                      </label>
+                    </div>
+          </div>
+       </form>
+      </div>
+
+      <footer>
+        <div class="row">
+          <div class="col-lg-12">
+            <p>Copyright © Findaspace 2014</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="/javascripts/jquery-1.8.3.min.js"></script>
+    <script src="/javascripts/bootstrap.min.js"></script>
+    <script src="/javascripts/submitspace.js"></script>
+  </body>
+</html>

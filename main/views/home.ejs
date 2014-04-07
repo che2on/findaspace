@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="stylesheet" href="/stylesheets/bootstrap.css">
+    <link rel="stylesheet" href="/stylesheets/heroic-features.css">
+  </head>
+  <body>
+    <nav role="navigation" class="navbar navbar-fixed-top navbar-inverse">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" data-toggle="collapse" data-target=".navbar-ex1-collapse" class="navbar-toggle"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="index.php" class="navbar-brand">Co-workspace</a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling-->
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+          <ul class="nav navbar-nav pull-right">
+          <% if (user.local.email) { %>
+            <li><a href="#" class="pull-right">Submit Space</a></li>
+            <li><a href="#" class="pull-right">Welcome <%= user.local.email %></a></li>
+            <li><a href="/logout" class="pull-right">Logout</a></li>
+          <% } else { %>
+            <li><a href="/login" class="pull-right">Login</a></li>
+            <li><a href="/signup" class="pull-right">Register</a></li>
+          <% } %> 
+          </ul>
+        </div>
+        <!-- /.navbar-collapse-->
+      </div>
+      <!-- /.container-->
+    </nav>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <form role="form">
+            <div class="form-group">
+              <input id="exampleInputEmail1" type="text" placeholder="Location" class="form-control">
+            </div>
+            <div class="form-group">
+              <input id="exampleInputPassword1" type="text" placeholder="# of people" class="form-control">
+            </div>
+            <div class="form-group">
+              <input id="exampleInputPassword1" type="text" placeholder="Duration" class="form-control">
+            </div><a type="submit" href="/listing" class="btn btn-success">Search</a>
+          </form>
+        </div>
+        <div class="col-md-6">
+          <div style="margin-top:0px" class="jumbotron hero-spacer col-lg-15">
+            <!--h1 Share your workspace today!
+            -->
+            <p>Introducing the concept of sharing workspaces. Rent out free space in your office and make this happen.</p>
+            <p><a class="btn btn-primary btn-large">Share now!</a></p>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <div class="row">
+        <div class="col-lg-12">
+          <h3>Available workspaces</h3>
+        </div>
+      </div>
+      <!-- /.row-->
+      <div class="row text-center">
+        <div class="col-lg-3 col-md-6 hero-feature">
+          <div class="thumbnail"><img src="http://placehold.it/800x500" alt="">
+            <div class="caption">
+              <h3>Feature Label</h3>
+              <p>This would be a great spot to feature some brand new products!</p>
+              <p><a href="#" class="btn btn-primary">Buy Now!</a><a href="#" class="btn btn-default">More Info</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 hero-feature">
+          <div class="thumbnail"><img src="http://placehold.it/800x500" alt="">
+            <div class="caption">
+              <h3>Feature Label</h3>
+              <p>This would be a great spot to feature some brand new products!</p>
+              <p><a href="#" class="btn btn-primary">Book!</a><a href="#" class="btn btn-default">More Info</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 hero-feature">
+          <div class="thumbnail"><img src="http://placehold.it/800x500" alt="">
+            <div class="caption">
+              <h3>Feature Label</h3>
+              <p>This would be a great spot to feature some brand new products!</p>
+              <p><a href="#" class="btn btn-primary">Book!</a><a href="#" class="btn btn-default">More Info</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 hero-feature">
+          <div class="thumbnail"><img src="http://placehold.it/800x500" alt="">
+            <div class="caption">
+              <h3>Feature Label</h3>
+              <p>This would be a great spot to feature some brand new products!</p>
+              <p><a href="#" class="btn btn-primary">Book!</a><a href="#" class="btn btn-default">More Info</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /.row-->
+      <hr>
+      <footer>
+        <div class="row">
+          <div class="col-lg-12">
+            <p>Copyright © Company 2014</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="/javascripts/jquery-1.8.3.min.js"></script>
+    <script src="/javascripts/bootstrap.min.js"></script>
+  </body>
+</html>
