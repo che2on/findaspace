@@ -4,7 +4,7 @@ Find A Space
 
 Welcome to Findaspace project.
 
-View Working version here: http://findaspace.electionbooth.in
+View Working version here: http://findaspace.electionbooth.in:8080
 
 Run instructions for coders
 
