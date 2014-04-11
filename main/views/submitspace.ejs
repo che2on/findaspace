@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="app">
   <head>
     <title></title>
     <link rel="stylesheet" href="/stylesheets/style.css">
     <link rel="stylesheet" href="/stylesheets/bootstrap.css">
     <link rel="stylesheet" href="/stylesheets/heroic-features.css">
+    <link rel="stylesheet" href="/stylesheets/submitspace.css">
   </head>
   <body>
     <nav role="navigation" class="navbar navbar-fixed-top navbar-inverse">
@@ -30,16 +31,36 @@
     </nav>
     <div class="container">
       <div class=row">
-      <h1 style="text-align:center"> Submit your office space </h1>
+          <h1 style="text-align:center"> Submit your office space </h1>
       </div>
+
       <div class="row">
        <form role="form" id="form1">
             <div class="col-md-6">
-               <div class="form-group">
-                    <label for="inputfile">Upload Pic</label>
-                    <input type="file" id="inputfile" name="field3">
-                    <p class="help-block">Maximum 10 Mb.</p>
+              <div ng-controller="FileUploadCtrl">
+                  <div class="row">
+                  <label for="fileToUpload">Select a File to Upload</label><br />
+                  <input type="file" ng-model-instant id="fileToUpload" multiple onchange="angular.element(this).scope().setFiles(this)" />
+                  </div>
+            <div id="dropbox" class="dropbox" ng-class="dropClass"><span>{{dropText}}</span></div>
+            <div ng-show="files.length">
+                <div ng-repeat="file in files.slice(0)">
+                    <span>{{file.webkitRelativePath || file.name}}</span>
+                    (<span ng-switch="file.size > 1024*1024">
+                        <span ng-switch-when="true">{{file.size / 1024 / 1024 | number:2}} MB</span>
+                        <span ng-switch-default>{{file.size / 1024 | number:2}} kB</span>
+                    </span>)
+            </div>
+            <input type="button" ng-click="uploadFile()" value="Upload" />
+            <div ng-show="progressVisible">
+                <div class="percent">{{progress}}%</div>
+                <div class="progress-bar">
+                    <div class="uploaded" ng-style="{'width': progress+'%'}"></div>
                 </div>
+            </div>
+          </div>
+          <br>
+
                 <div class="form-group">
                   <label> Open from (time) </label>
                   <input id="exampleInputPassword3" type="text" placeholder="Open from (time)"  name="field4" class="form-control">
@@ -131,6 +152,8 @@
     </div>
     <script src="/javascripts/jquery-1.8.3.min.js"></script>
     <script src="/javascripts/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"> </script>
     <script src="/javascripts/submitspace.js"></script>
+    
   </body>
 </html>
