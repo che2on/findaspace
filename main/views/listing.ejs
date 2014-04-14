@@ -130,19 +130,19 @@
            
           <div class="row">
             <ul class="list-group">
-             <% for (var i = 0; i < 5; i++) { %>
+             <% for (var i = 0; i < items.length; i++) { %>
               <li>
                 <div class="panel panel-default">
                   <div class="panel-body">
                     <div class="panel-more1"><img src="http://lorempixel.com/150/150"></div>
                     <div class="panel-info">
-                      <p><strong><%= items.title %></strong></p>
-                      <p> <%= items.desc %>
+                      <p><strong><%= items[i].title %></strong></p>
+                      <p> <%= items[i].desc %>
                         <div class="btn-group">
                           <button type="button" data-toggle="dropdown" class="btn btn-default btn-xs dropdown-toggle">Map<span class="caret"></span></button>
                           <ul class="dropdown-menu"></ul>
                         </div>
-                        <p><%= items.skill %></p>
+                        <p><%= items[i].skill %></p>
                       </p>
                     </div>
                     <div class="panel-rating"><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span>
@@ -150,7 +150,7 @@
                     </div>
                     <div class="panel-more1">
                       <div style="text-align:center">
-                        <p style="font-size: 44px;"><%= items.price %></p>
+                        <p style="font-size: 44px;"><%= items[i].price %></p>
                       </div><br>
                       <div style="text-align:center"><a href="#" class="btn btn-primary">Contact</a></div>
                     </div>
@@ -158,81 +158,6 @@
                 </div>
               </li>
               <% } %>
-              <li>
-                <div class="panel panel-default">
-                  <div class="panel-body">
-                    <div class="panel-more1"><img src="http://lorempixel.com/150/150"></div>
-                    <div class="panel-info">
-                      <p><strong>Title for listing</strong></p>
-                      <p>Short description of the listing<br>the description part...<br>here it ends...<br>
-                        <div class="btn-group">
-                          <button type="button" data-toggle="dropdown" class="btn btn-default btn-xs dropdown-toggle">Map<span class="caret"></span></button>
-                          <ul class="dropdown-menu"></ul>
-                        </div>
-                      </p>
-                    </div>
-                    <div class="panel-rating"><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span>
-                      <p>3 Ratings</p>
-                    </div>
-                    <div class="panel-more1">
-                      <div style="text-align:center">
-                        <p style="font-size: 44px;">450€</p>
-                      </div><br>
-                      <div style="text-align:center"><a href="#" class="btn btn-primary">Contact</a></div>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div class="panel panel-default">
-                  <div class="panel-body">
-                    <div class="panel-more1"><img src="http://lorempixel.com/150/150"></div>
-                    <div class="panel-info">
-                      <p><strong>Title for listing</strong></p>
-                      <p>Short description of the listing<br>the description part<br>here it ends....<br>
-                        <div class="btn-group">
-                          <button type="button" data-toggle="dropdown" class="btn btn-default btn-xs dropdown-toggle">Map<span class="caret"></span></button>
-                          <ul class="dropdown-menu"></ul>
-                        </div>
-                      </p>
-                    </div>
-                    <div class="panel-rating"><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span>
-                      <p>4 Ratings</p>
-                    </div>
-                    <div class="panel-more1">
-                      <div style="text-align:center">
-                        <p style="font-size: 44px;">350€</p>
-                      </div><br>
-                      <div style="text-align:center"><a href="#" class="btn btn-primary">Contact</a></div>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div class="panel panel-default">
-                  <div class="panel-body">
-                    <div class="panel-more1"><img src="http://lorempixel.com/150/150"></div>
-                    <div class="panel-info">
-                      <p><strong>Title for listing</strong></p>
-                      <p>Short description of the listing<br>the description part...<br>here it ends...<br>
-                        <div class="btn-group">
-                          <button type="button" data-toggle="dropdown" class="btn btn-default btn-xs dropdown-toggle">Map<span class="caret"></span></button>
-                          <ul class="dropdown-menu"></ul>
-                        </div>
-                      </p>
-                    </div>
-                    <div class="panel-rating"><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span>
-                      <p>3 Ratings</p>
-                    </div>
-                    <div class="panel-more1">
-                      <div style="text-align:center">
-                        <p style="font-size: 44px;">945€</p>
-                      </div><br>
-                      <div style="text-align:center"><a href="#" class="btn btn-primary">Contact</a></div>
-                    </div>
-                  </div>
-                </div>
-              </li>
             </ul>
           </div>
         </div>

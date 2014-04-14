@@ -30,7 +30,7 @@ module.exports = function(app, passport) {
 	app.get('/listing', isLoggedIn_listing, function(req, res) {
 		res.render('listing.ejs', {
 			user : req.user,
-			items: {title:"My Title", desc:"My desc", price:"1234", skill:"mobile"}
+			items: [{title:"My Title", desc:"My desc", price:"1234", skill:"mobile"}]
 		});
 	});
 
@@ -212,7 +212,7 @@ function isLoggedIn_listing(req, res, next) {
 		return next();
 
 	//res.redirect('/profile' , { });
-	res.render('listing.ejs', { user : {local:{email:null}}, items: {title:"My Title", desc:"My desc", price:"1234", skill:"mobile"}});
+	res.render('listing.ejs', { user : {local:{email:null}}, items: [{title:"My Title", desc:"My desc", price:"1234", skill:"mobile"}]});
 }
 
 function isLoggedIn_home(req, res, next) {
